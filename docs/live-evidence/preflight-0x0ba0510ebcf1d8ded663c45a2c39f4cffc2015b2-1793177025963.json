@@ -1,0 +1,22 @@
+{
+  "checked_at": "2026-10-28T08:43:45.961Z",
+  "address": "0x0bA0510EBcF1D8Ded663c45A2C39F4CFFC2015B2",
+  "chain_id": 61999,
+  "source_sha256": "7f82afdca03a2d8dc011543c0a6caea2ada4afcc970b0567b243293bed240ad4",
+  "deployed_sha256": "7f82afdca03a2d8dc011543c0a6caea2ada4afcc970b0567b243293bed240ad4",
+  "byte_for_byte": true,
+  "version": {
+    "custody": false,
+    "external_execution": false,
+    "max_active": 8,
+    "max_boards_per_creator": 32,
+    "max_brief": 1200,
+    "max_model_output_chars": 128000,
+    "max_requests_per_member": 32,
+    "max_work": 600,
+    "name": "ScopeMutex",
+    "policy": "scopemutex/atomic-work-exclusion-v1",
+    "quality_verification": false,
+    "version": "0.1.0"
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "ctor": {
+    "params": [],
+    "kwparams": {}
+  },
+  "methods": {
+    "claim_work": {
+      "params": [
+        [
+          "board_id",
+          "string"
+        ],
+        [
+          "board_digest",
+          "string"
+        ],
+        [
+          "nonce",
+          "string"
+        ],
+        [
+          "work",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "string",
+      "payable": false
+    },
+    "close_intake": {
+      "params": [
+        [
+          "board_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "any",
+      "payable": false
+    },
+    "create_board": {
+      "params": [
+        [
+          "local_id",
+          "string"
+        ],
+        [
+          "brief",
+          "string"
+        ],
+        [
+          "roster_json",
+          "string"
+        ],
+        [
+          "hold_seconds",
+          "int"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "string",
+      "payable": false
+    },
+    "get_board": {
+      "params": [
+        [
+          "board_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "string"
+    },
+    "get_request": {
+      "params": [
+        [
+          "request_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "string"
+    },
+    "get_version": {
+      "params": [],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "string"
+    },
+    "hand_in": {
+      "params": [
+        [
+          "request_id",
+          "string"
+        ],
+        [
+          "artifact_digest",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "any",
+      "payable": false
+    },
+    "release": {
+      "params": [
+        [
+          "request_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "any",
+      "payable": false
+    },
+    "sweep_expired": {
+      "params": [
+        [
+          "board_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "int",
+      "payable": false
+    }
+  }
+}

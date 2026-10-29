@@ -1,0 +1,77 @@
+{
+  "checked_at": "2026-10-28T03:59:32.662339+00:00",
+  "scope": "Controlled production-entrypoint harness, linter/schema and SDK import/syntax; not real GenVM or live model consensus",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "source_sha256": "7f82afdca03a2d8dc011543c0a6caea2ada4afcc970b0567b243293bed240ad4",
+  "samples": {
+    "workboard.json": "23254b1e3c2948a0b436b0ace6017a7bd5d32c03bc134a4060d32b11eeb8b5e4"
+  },
+  "commands": [
+    {
+      "command": [
+        "C:\\Users\\admin\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-m",
+        "pytest",
+        "-q",
+        "--tb=short",
+        "-p",
+        "no:cacheprovider",
+        "tests"
+      ],
+      "exit_code": 0,
+      "stdout": "........................................................................ [ 93%]\n.....                                                                    [100%]\n77 passed in 0.19s\n",
+      "stderr": "WARNING: File `gltest.config.yaml` not found in the current directory, using default config, create a `gltest.config.yaml` file to manage multiple networks\nINFO: Clearing artifacts directory: artifacts\nINFO: Using the following configuration:\nINFO:   RPC URL: http://127.0.0.1:4000/api\nINFO:   Selected Network: localnet\nINFO:   Available networks: ['localnet', 'studionet', 'testnet_asimov', 'testnet_bradbury']\nINFO:   Selected chain type: localnet\nINFO:   Available chains: localnet, studionet, testnet_asimov, testnet_bradbury\nINFO:   Contracts directory: contracts\nINFO:   Artifacts directory: artifacts\nINFO:   Environment: .env\nINFO:   Default wait interval: 3000 ms\nINFO:   Default wait retries: 50\nINFO:   Leader only mode: False\n"
+    },
+    {
+      "command": [
+        "C:\\Users\\admin\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-X",
+        "utf8",
+        "-m",
+        "genvm_linter.cli",
+        "check",
+        "contracts/scope_mutex.py"
+      ],
+      "exit_code": 0,
+      "stdout": "\n\u2713 Lint passed (3 checks)\n\u2713 Validation passed\n  Contract: ScopeMutex\n  Methods: 9 (3 view, 6 write)\n  \u2139 py-genlayer: a newer runner is available (1zr6nqk597d97kg0dyxg0shhrykx5v02zjgnyrajapy4wlqvfvwh). See https://github.com/genlayerlabs/genvm/releases for changes.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\admin\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-X",
+        "utf8",
+        "-m",
+        "genvm_linter.cli",
+        "schema",
+        "contracts/scope_mutex.py",
+        "-o",
+        "docs/schema.json"
+      ],
+      "exit_code": 0,
+      "stdout": "\nSchema written to docs/schema.json\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "scripts/live.mjs"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "node",
+        "--input-type=module",
+        "-e",
+        "import {createClient} from 'genlayer-js'; import {studionet} from 'genlayer-js/chains'; import {readFileSync} from 'node:fs'; console.log(JSON.stringify({node:process.version,sdk_version:JSON.parse(readFileSync('node_modules/genlayer-js/package.json')).version,sdk_import:typeof createClient,chain_id:studionet.id}));"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"node\":\"v26.2.0\",\"sdk_version\":\"1.1.8\",\"sdk_import\":\"function\",\"chain_id\":61999}\n",
+      "stderr": ""
+    }
+  ]
+}

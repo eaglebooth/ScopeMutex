@@ -1,0 +1,13 @@
+{
+  "name": "scopemutex-verification",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "preflight": "node scripts/live.mjs preflight",
+    "test:live": "node scripts/live.mjs core",
+    "test:audit": "node scripts/live.mjs audit",
+    "test:race": "node scripts/live.mjs race",
+    "test:queued": "node scripts/live.mjs queued"
+  },
+  "devDependencies": {"genlayer-js": "1.1.8"}
+}

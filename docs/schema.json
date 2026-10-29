@@ -1,0 +1,168 @@
+{
+  "ctor": {
+    "params": [],
+    "kwparams": {}
+  },
+  "methods": {
+    "claim_work": {
+      "params": [
+        [
+          "board_id",
+          "string"
+        ],
+        [
+          "round_digest",
+          "string"
+        ],
+        [
+          "expected_epoch",
+          "int"
+        ],
+        [
+          "nonce",
+          "string"
+        ],
+        [
+          "work",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "string",
+      "payable": false
+    },
+    "close_intake": {
+      "params": [
+        [
+          "board_id",
+          "string"
+        ],
+        [
+          "expected_epoch",
+          "int"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "any",
+      "payable": false
+    },
+    "create_board": {
+      "params": [
+        [
+          "local_id",
+          "string"
+        ],
+        [
+          "brief",
+          "string"
+        ],
+        [
+          "roster_json",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "string",
+      "payable": false
+    },
+    "end_round": {
+      "params": [
+        [
+          "board_id",
+          "string"
+        ],
+        [
+          "expected_epoch",
+          "int"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "int",
+      "payable": false
+    },
+    "get_board": {
+      "params": [
+        [
+          "board_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "string"
+    },
+    "get_request": {
+      "params": [
+        [
+          "request_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "string"
+    },
+    "get_version": {
+      "params": [],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "string"
+    },
+    "hand_in": {
+      "params": [
+        [
+          "request_id",
+          "string"
+        ],
+        [
+          "request_digest",
+          "string"
+        ],
+        [
+          "artifact_digest",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "any",
+      "payable": false
+    },
+    "release": {
+      "params": [
+        [
+          "request_id",
+          "string"
+        ],
+        [
+          "request_digest",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "any",
+      "payable": false
+    },
+    "start_round": {
+      "params": [
+        [
+          "board_id",
+          "string"
+        ],
+        [
+          "expected_epoch",
+          "int"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "int",
+      "payable": false
+    }
+  }
+}

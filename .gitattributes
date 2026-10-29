@@ -1,0 +1,5 @@
+* text=auto eol=lf
+contracts/*.py text eol=lf
+samples/** text eol=lf
+docs/live-evidence/** -text
+tests/fixtures/** -text

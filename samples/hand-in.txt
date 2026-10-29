@@ -1,0 +1,3 @@
+ScopeMutex demonstration hand-in artifact.
+This locally authored test document demonstrates registration of an artifact digest.
+It does not claim that real deployment documentation was written or quality-reviewed.
